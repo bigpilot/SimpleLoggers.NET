@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>SimpleLoggers.NET</PackageId>
+    <Company />
+    <Product>SimpleLoggers.NET</Product>
+    <Description>Simple loggers for .NET</Description>
+    <Copyright>(c) Copyright 2020 bigpilot96</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/bigpilot/SimpleLoggers.NET</PackageProjectUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/bigpilot/SimpleLoggers.NET.git</RepositoryUrl>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <Authors>bigpilot96</Authors>
+    <PackageTags>simple logger</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Diagnostics.EventLog" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>
