@@ -9,6 +9,7 @@ This project contains the following loggers:
 - TextFileLogger
 - DebugWindowLogger
 - ConsoleLogger
+- TraceLogger
 
 and a simple Exception logging helper:
 
