@@ -1,6 +1,4 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Moq;
 using Xunit;
 
 namespace SimpleLoggers.Test
@@ -51,6 +49,14 @@ namespace SimpleLoggers.Test
         public void TestDatabaseLogger()
         {
             var logger = new DatabaseLogger("Server = .\\SQLEXPRESS; Database = ApplicationLog; Trusted_Connection = True;");
+
+            WriteLogMessages(logger);
+        }
+
+        [Fact(Skip = null)]
+        public void TestDailyTextFileLogger()
+        {
+            var logger = new DailyTextFileLogger(".", "TestLogFile.txt");
 
             WriteLogMessages(logger);
         }
