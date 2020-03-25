@@ -19,7 +19,7 @@ namespace SimpleLoggers
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(LogHelper.FormatException(ex));
+                    Debug.WriteLine($"Exception in EventViewerLogger: {LogHelper.FormatException(ex)}");
                 }
             }
         }
