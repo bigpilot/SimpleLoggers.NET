@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Moq;
 using Xunit;
 
@@ -47,6 +48,14 @@ namespace SimpleLoggers.Test
         }
 
         [Fact(Skip = "Integration Test")]
+        public void TestDatabaseLogger()
+        {
+            var logger = new DatabaseLogger("Server = .\\SQLEXPRESS; Database = ApplicationLog; Trusted_Connection = True;");
+
+            WriteLogMessages(logger);
+        }
+
+        [Fact(Skip = "Integration Test")]
         public void TestExceptionHelper()
         {
             var logger = new TraceLogger();
@@ -59,7 +68,6 @@ namespace SimpleLoggers.Test
             {
                 LogHelper.LogException("Failed to divide by zero!", logger, ex);
             }
-
         }
 
         private void WriteLogMessages(ILogger logger)
