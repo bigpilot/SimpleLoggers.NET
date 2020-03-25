@@ -36,13 +36,13 @@ namespace SimpleLoggers
             WriteEntry($"{DateTime.Now.ToShortDateString()} - {DateTime.Now.ToShortTimeString()} {messageType}: {message}");
         }
 
-        private void WriteEntry(string message)
+        private async void WriteEntry(string message)
         {
             try
             {
                 using (var stream = File.AppendText(_logFilePath))
                 {
-                    stream.WriteLineAsync(message);
+                    await stream.WriteLineAsync(message);
                 }
             }
             catch (Exception ex)
