@@ -53,7 +53,7 @@ namespace SimpleLoggers.Test
             WriteLogMessages(logger);
         }
 
-        [Fact(Skip = null)]
+        [Fact(Skip = "Integration Test")]
         public void TestDailyTextFileLogger()
         {
             var logger = new DailyTextFileLogger(".", "TestLogFile.txt");

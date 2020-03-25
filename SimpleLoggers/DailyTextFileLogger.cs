@@ -13,6 +13,8 @@ namespace SimpleLoggers
             _logFilePath = $"{Path.Combine(logFileDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "--" + logFileName)}";
         }
 
+        #region ILogger Members
+
         public void Info(string message)
         {
             FormatAndWriteEntry("Info", message);
@@ -27,6 +29,8 @@ namespace SimpleLoggers
         {
             FormatAndWriteEntry("Error", message);
         }
+
+        #endregion
 
         private void FormatAndWriteEntry(string messageType, string message)
         {
