@@ -4,6 +4,7 @@ namespace SimpleLoggers
 {
     public class ConsoleLogger : ILogger
     {
+        #region ILogger Members
         public void Info(string message)
         {
             FormatEntry("Info", message);
@@ -18,6 +19,7 @@ namespace SimpleLoggers
         {
             FormatEntry("Error", message);
         }
+        #endregion
 
         private void FormatEntry(string messageType, string message)
         {
