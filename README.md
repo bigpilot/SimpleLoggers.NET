@@ -47,4 +47,8 @@ Although targeted at .NET Standard 2.0, these loggers will mostly be used in Bus
 
 This project is licensed under the most permissive license available: the MIT License.
 
+## Availablity
+
+Also available as a NuGet package from NuGet.org
+
 
