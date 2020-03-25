@@ -49,6 +49,6 @@ This project is licensed under the most permissive license available: the MIT Li
 
 ## Availability
 
-Also available as a NuGet package from [NuGet.org](https://www.nuget.org/)
+Also available as a NuGet package from [NuGet.org](https://www.nuget.org/packages/SimpleLoggers.NET/)
 
 
