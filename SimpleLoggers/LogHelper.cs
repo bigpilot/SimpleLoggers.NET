@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 using System.Text;
 
 namespace SimpleLoggers
@@ -37,8 +38,8 @@ namespace SimpleLoggers
             }
 
             messageBuilder.AppendLine(FormatException(ex));
-            
-            logger.Error(messageBuilder.ToString());
+
+            logger.Error(messageBuilder.ToString());        // exception is always logged as Error
         }
     }
 }
