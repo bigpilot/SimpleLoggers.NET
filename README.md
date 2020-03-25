@@ -10,6 +10,7 @@ This project contains the following loggers:
 - DebugWindowLogger
 - ConsoleLogger
 - TraceLogger
+- DatabaseLogger (for Entity Framework, should work with most databases)
 
 and a simple Exception logging helper:
 
@@ -39,5 +40,5 @@ Although targeted at .NET Standard 2.0, these loggers will mostly be used in Bus
 ## Roadmap
 
 - a DailyTextFileLogger with timestamping in the logfile name
-- a DatabaseLogger for Entity Framework (should work with most databases)
+
 
