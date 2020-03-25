@@ -40,5 +40,6 @@ Although targeted at .NET Standard 2.0, these loggers will mostly be used in Bus
 ## Roadmap
 
 - a DailyTextFileLogger with timestamping in the logfile name
+- Examples with usage scenario's
 
 
