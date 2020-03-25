@@ -14,6 +14,7 @@ namespace SimpleLoggers
         }
 
         #region ILogger Members
+
         public void Info(string message)
         {
             FormatEntry("Info", message);
