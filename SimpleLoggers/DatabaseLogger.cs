@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace SimpleLoggers
 {
     // create a table named LogEntries in your database with the following columns:
-    class DatabaseLogEntry
+    class LogEntry
     {
         [Key]
         public int Id { get; set; }
@@ -28,7 +28,7 @@ namespace SimpleLoggers
             _connectionString = connectionString;
         }
 
-        public DbSet<DatabaseLogEntry> LogEntries { get; set; }
+        public DbSet<LogEntry> LogEntries { get; set; }
 
         // use this method for Integration testing
         // normally your would configure your database provider in Startup
@@ -56,19 +56,19 @@ namespace SimpleLoggers
 
         public void Info(string message)
         {
-            _dbContext.LogEntries.Add(new DatabaseLogEntry() { Timestamp = DateTime.Now, Type = "Info", Message = message });
+            _dbContext.LogEntries.Add(new LogEntry() { Timestamp = DateTime.Now, Type = "Info", Message = message });
             _dbContext.SaveChanges();
         }
 
         public void Warning(string message)
         {
-            _dbContext.LogEntries.Add(new DatabaseLogEntry() { Timestamp = DateTime.Now, Type = "Warning", Message = message });
+            _dbContext.LogEntries.Add(new LogEntry() { Timestamp = DateTime.Now, Type = "Warning", Message = message });
             _dbContext.SaveChanges();
         }
 
         public void Error(string message)
         {
-            _dbContext.LogEntries.Add(new DatabaseLogEntry() { Timestamp = DateTime.Now, Type = "Error", Message = message });
+            _dbContext.LogEntries.Add(new LogEntry() { Timestamp = DateTime.Now, Type = "Error", Message = message });
             _dbContext.SaveChanges();
         }
     }
